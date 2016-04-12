@@ -1,2 +1,2 @@
 # codes
-Repository to post codes (learning, pieces of code, ...)
+Repository to post codes (setup, learning, pieces of code, ...)

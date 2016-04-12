@@ -1,0 +1,8 @@
+sudo apt-get install bash curl git htop build-essential bzip2 libxml2-dev libxslt1-dev libncurses5-dev libreadline-gplv2-dev libssl-dev libsqlite3-dev libmysqld-dev
+curl -L https://get.rvm.io | bash -s stable
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" 
+bash -s stable < <(curl -s https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer)
+echo '[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function' >> ~/.bashrc
+source .bashrc
+rvm install <ruby_version>
+gem install rails
