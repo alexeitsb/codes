@@ -1,0 +1,24 @@
+Have a rails project holding all models and migrations and share it with many main apps!
+
+Create a rails engine project with --full option
+rails plugin new my_engine --full --database=mysql
+
+Edit my_engine.gemspec and set homepage, summary and description specifications.
+
+Add the following code to lib/my_engine/engine.rb.
+This will make your migrations accessible from main app!
+class Engine < ::Rails::Engine
+  initializer :append_migrations do |app|
+    unless app.root.to_s.match root.to_s
+      config.paths["db/migrate"].expanded.each do |expanded_path|
+        app.config.paths["db/migrate"] << expanded_path
+      end
+    end
+  end
+end
+
+Generate and upload your gem to a gem hosting (I like Gemfury).
+
+Add the following line to Gemfile main app:
+gem 'my_engine', source: 'source_to_uploaded_gem_file'
+
