@@ -1,0 +1,6 @@
+// Script to prevent form to be submitted by hitting enter.
+$(document).on("keyup keypress", "form input[type='text']", function(event) {
+  if(event.keyCode == 13) {
+    event.preventDefault();
+  }
+});
