@@ -1,0 +1,5 @@
+// Script to make links work in accordion header.
+$("#accordion h3 a").click(function() {
+  window.location = $(this).attr("href");
+  return false;
+});
