@@ -1,0 +1,6 @@
+Ubuntu 16.04 move Unity's Launcher to the Bottom
+gsettings set com.canonical.Unity.Launcher launcher-position Bottom
+
+Ubuntu 16.04 move Unity's Launcher to the Left
+gsettings set com.canonical.Unity.Launcher launcher-position Left
+
